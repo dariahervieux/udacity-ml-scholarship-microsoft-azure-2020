@@ -1,0 +1,20 @@
+digraph G {
+    splines="FALSE";
+
+    /* Entities */
+    "Data Collect" [shape="square"]
+    "Prepare Data" [shape="square"]
+    "Train the model"[shape="square"]
+    "Evaluate model"[shape="square"]
+    "Deploy the model"[shape="square"]
+    
+    /* Relationships */
+    "Data Collect" -> "Prepare Data";
+    "Prepare Data" -> "Train the model";
+    "Train the model" -> "Evaluate model";
+    "Evaluate model" -> "Deploy the model";
+    "Deploy the model" -> "Train the model"[headlabel="Retrain the model"]
+
+    /* Ranks */
+
+}
