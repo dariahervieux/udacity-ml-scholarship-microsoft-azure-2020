@@ -115,7 +115,7 @@ Deep Learning - subcategory of ML, usage of neural-network architecture
 | numeric  |  integer, float | price |
 | time-series  |  series of numerical values that can be ordered (desciminator: time, location, ...) | price evolution, market stock value |
 | category  |  discrete and limited set of values, most of the features are of this type | gender, location |
-| text | words, sentencies | article |
+| text | words, sentences | article |
 | image | | videos, pictures |
 
 Every data ends up being numerical in Data Science for an algorithm to be able to process it.
@@ -138,9 +138,9 @@ Mathemathical domain which deals with calculation on vectors is linear algebra.
 
 There are two common approaches to scaling data:
 * standardization - rescales data so that it has a mean of 0 and a standard deviation of 1: 
-  > (𝑥 − 𝜇)/𝜎
+  > *(𝑥 − 𝜇)/𝜎*
 * normalization - rescales the data into the range [0, 1]:
-  > (𝑥 −𝑥𝑚𝑖𝑛)/(𝑥𝑚𝑎𝑥 −𝑥𝑚𝑖𝑛)
+  > *(𝑥 −𝑥𝑚𝑖𝑛)/(𝑥𝑚𝑎𝑥 −𝑥𝑚𝑖𝑛)*
 
 ## Vectorizing non-numerical data
 
@@ -199,6 +199,8 @@ Further processing is removing *stop words*. Stop words are high-frequency words
 Common approaches to encode normalized text into a vector include:
 * [Term Frequency-Inverse Document Frequency (TF-IDF)](https://en.wikipedia.org/wiki/Tf-idf) vectorization
 * Word embedding, as done with [Word2vec](https://en.wikipedia.org/wiki/Word2vec) or [Global Vectors (GloVe)](https://nlp.stanford.edu/pubs/glove.pdf)
+
+[Extracting and serving feature embeddings for machine learning](https://cloud.google.com/solutions/machine-learning/overview-extracting-and-serving-feature-embeddings-for-machine-learning)
 
 ##### TF-IDF
 Each word has an "importance" weight.
@@ -441,10 +443,10 @@ There are three main approaches to machine learning:
 |:-|:-|:-|
 | Learns both from inputs and expected outputs. | Learns from input data only. | Learns how an agent should take action in an environment in order to maximize a reward function.|
 | Passive process. | Passive process. | Active process - the actions of the agent influence the data observed. Used in romotics, games, control theory, autonomous driving. |
-| Classification: Outputs are categorical. For example span/not-spam | Clustering: Assigns entities to inherent groups. | Markov decision process: A mathematical process to model decision-making in situations where outcomes are partly random and partly under the control of a decision-maker. Does not assume knowledge of an exact mathematical model. |
+| *Classification*: Outputs are categorical. For example span/not-spam | Clustering: Assigns entities to inherent groups. | Markov decision process: A mathematical process to model decision-making in situations where outcomes are partly random and partly under the control of a decision-maker. Does not assume knowledge of an exact mathematical model. |
 | Feature learning: Features are learned from labeled data. Used to transform inputs into other inputs which are more relevant to solve a given problem.| Feature learning: Features are learned from unlabeled data.  | |
 | Anomaly detection: classification of normal/abnormal. | Anomaly detection: Learns from unlabeled data, using the assumption that the majority of entities are normal.| |
-| Regression: Outputs are continuous and numerical. For example a note of a student depending on hours spent. | | |
+| *Regression*: Outputs are continuous and numerical. For example a note of a student depending on hours spent. | | |
 | Similarity learning: Learns from examples using a similarity function that measures how similar two objects are. Used in ranking, recommendation systems. | | |
 
 # ML trade-Offs
@@ -495,19 +497,10 @@ Limitting overfitting technics:
 * Use more data.
 * Stop the training early: when the *performance* on the testing dataset *has not improved* after a number of training iterations.
 
-    
-    
-    
-
-
-    
-    
-    
-
-
-
 # Resources:
 * [Udacity Linear Algebra Refresher Course](https://www.udacity.com/course/linear-algebra-refresher-course--ud953).
 * [Khanacademy liear algebra course](https://www.khanacademy.org/math/linear-algebra)
 * [Keras Wiki article](https://en.wikipedia.org/wiki/Keras)
 * [Machine Learning as a Service — The Top Cloud Platform and AI Vendors](https://medium.com/appanion/machine-learning-as-a-service-the-top-cloud-platform-and-ai-vendors-2df45d51374d) article by Tobias Bohnhoff.
+* https://developers.google.com/machine-learning/crash-course/validation/another-partition
+* https://towardsdatascience.com/understanding-the-bias-variance-tradeoff-165e6942b229
