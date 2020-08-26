@@ -96,11 +96,11 @@ Examples of feature learning;
 * supervised approaches - new features are learned from labelled data:
   * Dataset contains multiple categorical features with high cardinality => use supervised encoding with Deep Learning (where feature embedding happens withing the hidden layers)
 * unsupervised approachas -
-  * clustering 
-  * Deep Learning autoencoding
+  * Clustering 
+  * Deep Learning auto-encoding
   * PCA
-  * independent component analysis
-  * matrix factorization
+  * Independent component analysis
+  * Matrix factorization
 
 ### Application of feature learning
 
@@ -159,8 +159,9 @@ Types of algorithms used to perform predictions:
 * Multi-variate regression - apart time (order) column, we can take other features into consideration
 * Prophet - works best for time-series that have seasonal effect
 * ForecastTCN (Temporal Convolutional Networks) - one dimentional convolutional network, this algorithm has a longer "memory" than other approaches
-* Recurrent Neural Networks - a classical netork with additional connections between nodes
+* Recurrent Neural Networks - a classical netork with additional connections between nodes (introducing cycles), RNN can learn time patterns. Used in speach recognition, text to speech synthesis, machine translation.
 
 # Resources
 
 * [Deep Learning, by Ian Goodfellow, Yoshua Bengio, Aaron Courville](https://www.deeplearningbook.org/contents/mlp.html)- [Resources](#resources)
+* https://developers.google.com/machine-learning/data-prep/transform/transform-categorical

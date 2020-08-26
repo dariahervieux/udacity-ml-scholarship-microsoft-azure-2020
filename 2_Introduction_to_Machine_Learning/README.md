@@ -149,7 +149,7 @@ There are two common approaches to scaling data:
 There are two approaches for encoding categorical data:
 * ordinal encoding  - converting the categorical data into integer codes ranging from 0 to (number of categories – 1).
   * drawback: "ordering" categories, making them less or more imporant depending on the order
-* one hot encoding - transforming each category into a column. If an item belongs to a category, there is an 1 in the cell, 0 otherwise.
+* one-hot encoding - transforming each category into a column. If an item belongs to a category, there is an 1 in the cell, 0 otherwise.
   * drawback: it can potentially generate a very large number of columns.
 
 ### Image data 
@@ -172,7 +172,7 @@ For example for a square grayscale image of 9 pixels:
 | 45  0  255 | => 1, 5, 6, 45, 0, 255, 4, 8, 7 
 | 4  78   7  |
 
-For more information, see [bitmap](https://en.wikipedia.org/wiki/BMP_file_format) image encoding.
+It seems for me that image encoding for ML is very similar to [bitmap](https://en.wikipedia.org/wiki/BMP_file_format) image encoding.
 
 
 Image preprocessing results in:
@@ -191,6 +191,9 @@ To be able to encode text one needs to normalize it, i.e. represent the text in 
 
 Example of normalization is *lemmatization*. Lemmatization consists of replacing each word by a corresponding lemma. Lemma is the dictionary from of a word.
 For example: is -> be, are -> be, am -> be.
+
+Another approach to normalization is *stemming*, which concists in chopping a word and finding its stem.
+For example: university -> univers. Disadvantages of stemming: stemming of a misspelled words, several words with different meaning may have the same stem: universe -> univers.
 
 Further processing is removing *stop words*. Stop words are high-frequency words that are unnecessary (or unwanted) during the analysis.
 
@@ -453,7 +456,7 @@ There are three main approaches to machine learning:
 
 The prediction error can be viewed as the sum of model error (error coming from the model) and the irreducible error (coming from data collection).
 
-> prediction error = Bias error + variance + error + irreducible error
+> prediction error = Bias error + variance error + irreducible error
 
 The goal of any *supervised* Ml algorithm is to acheve low bian and low variance.
 
